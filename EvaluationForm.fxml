@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EvaluationFormController">
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="183.0" prefHeight="183.0" prefWidth="600.0" style="-fx-background-color: lightblue;" VBox.vgrow="ALWAYS">
+         <children>
+            <Label text="Instructor Evaluation System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+            </Label>
+            <Pane prefHeight="47.0" prefWidth="258.0" />
+            <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logout" prefHeight="34.0" prefWidth="74.0" text="Logout" textFill="#478bc7">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="650.0">
+         <children>
+            <Label prefHeight="55.0" prefWidth="200.0" text="Evaluation Form" textFill="#4297f2">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Pane prefHeight="55.0" prefWidth="169.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="100.0" right="1.0" />
+               </HBox.margin>
+            </Pane>
+            <Button fx:id="changePasswordBtn" mnemonicParsing="false" onAction="#changePassword" prefHeight="32.0" prefWidth="127.0" text="Change Password" textFill="#4297f2">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <ScrollPane>
+         <content>
+            <VBox prefHeight="1076.0" prefWidth="520.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="466.0" text="Instructror Name">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="instNameCB" prefWidth="150.0" />
+                  <Label prefHeight="20.0" prefWidth="509.0" text="1. The instructor begins class on time in an orderly, organized fashion ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="q1CB" prefWidth="150.0" />
+                  <Label prefHeight="27.0" prefWidth="466.0" text="2. Teacher makes the class interactive .">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="q2CB" prefWidth="150.0" />
+                  <Label prefHeight="27.0" prefWidth="466.0" text="3. The teacher completes apropriate portion at apropriate time .">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="q3CB" prefWidth="150.0" />
+                  <Label prefHeight="27.0" prefWidth="466.0" text="4. Clearly states the goals or objectives for the period .">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="q4CB" prefWidth="150.0" />
+                  <Label prefHeight="27.0" prefWidth="466.0" text="5. Presents information in a clear and understandable manner .">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="q5CB" prefWidth="150.0" />
+                  <Label prefHeight="27.0" prefWidth="466.0" text="6. Uses effective techniques for gaining and maintaining attention .">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="q6CB" prefWidth="150.0" />
+                  <Label prefHeight="51.0" prefWidth="466.0" text="7. Communicates importance, relevance of material.">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="q7CB" prefWidth="150.0" />
+                  <Label prefHeight="27.0" prefWidth="466.0" text="8. Responds constructively to student opinions. ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="q8CB" prefWidth="150.0" />
+                  <Label prefHeight="27.0" prefWidth="466.0" text="9. Listens carefully to student comments and questions. ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <ChoiceBox fx:id="q9CB" prefWidth="150.0" />
+                  <Label prefHeight="27.0" prefWidth="466.0" text="Any comment">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="commentTextArea" prefColumnCount="50" prefHeight="200.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <HBox alignment="TOP_CENTER" spacing="30.0">
+                     <children>
+                        <Button fx:id="submitEvaluationBtn" mnemonicParsing="false" onAction="#submitEvaluation" text="Submit" textFill="#4297f2">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="cancelEvaluationBtn" mnemonicParsing="false" onAction="#cancelEvaluation" text="Cancel" textFill="#4297f2">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>
