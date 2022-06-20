@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EvaluationViewController">
+   <children>
+      <HBox prefHeight="0.0" prefWidth="600.0" style="-fx-background-color: lightblue;">
+         <children>
+            <Label text="Instructor Evaluation System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Pane prefHeight="47.0" prefWidth="267.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="backToAdminHomeBtn" mnemonicParsing="false" onAction="#backToAdminHome">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/left.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children></HBox>
+      <HBox alignment="CENTER" prefHeight="53.0" prefWidth="597.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="241.0" text="Details of Evaluation">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane>
+         <content>
+            <VBox spacing="10.0" style="-fx-background-color: y;">
+               <children>
+                  <Label text="Teachers Name">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="instNameLabel" layoutX="10.0" layoutY="91.0" prefHeight="17.0" prefWidth="271.0" />
+                  <Label prefHeight="20.0" prefWidth="523.0" text="1. The instructor begins class on time in an orderly, organized fashion ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="q1Label" layoutX="10.0" layoutY="108.0" prefHeight="17.0" prefWidth="271.0" />
+                  <Label layoutX="10.0" layoutY="125.0" prefHeight="17.0" prefWidth="331.0" text="2. Teacher makes the class interactive">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="q2Label" prefHeight="17.0" prefWidth="271.0" />
+                  <Label prefHeight="17.0" prefWidth="531.0" text="3. The teacher completes apropriate portion at apropriate time">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="q3Label" prefHeight="17.0" prefWidth="271.0" />
+                  <Label prefHeight="17.0" prefWidth="495.0" text="4. Clearly states the goals or objectives for the period">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="q4Label" prefHeight="17.0" prefWidth="271.0" />
+                  <Label prefHeight="17.0" prefWidth="495.0" text="5. Presents information in a clear and understandable manner ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="q5Label" prefHeight="17.0" prefWidth="271.0" />
+                  <Label prefHeight="17.0" prefWidth="495.0" text="6. Uses effective techniques for gaining and maintaining attention ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="q6Label" prefHeight="17.0" prefWidth="271.0" />
+                  <Label prefHeight="17.0" prefWidth="495.0" text="7. Communicates importance, relevance of material ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="q7Label" prefHeight="17.0" prefWidth="271.0" />
+                  <Label prefHeight="17.0" prefWidth="495.0" text="8. Responds constructively to student opinions ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="q8Label" prefHeight="17.0" prefWidth="271.0" />
+                  <Label prefHeight="17.0" prefWidth="495.0" text="9. Listens carefully to student comments and questions ">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="q9Label" prefHeight="17.0" prefWidth="271.0" />
+                  <Label prefHeight="17.0" prefWidth="495.0" text="Any comment">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="commentReadTextArea" editable="false" prefHeight="200.0" prefWidth="200.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextArea>
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <Button fx:id="deleteEvaluationBtn" mnemonicParsing="false" onAction="#deleteEvaluation" text="Delete Evaluation">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="40.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <HBox minHeight="-Infinity" prefWidth="600.0" VBox.vgrow="NEVER">
+         <children>
+            <Button fx:id="previousEvaluationBtn" mnemonicParsing="false" onAction="#previousEvaluation" text="&lt;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button fx:id="nextEvaluationBtn" mnemonicParsing="false" onAction="#nextEvaluation" text="&gt;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
