@@ -5,14 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import java.util.function.Predicate;
-
 import com.mysql.cj.xdevapi.Statement;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
-import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -24,7 +19,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
-
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -335,52 +329,19 @@ public class ManageInstructorsControler implements Initializable {
             // TODO: handle exception
         }
 
-        DeleteMainBtn.getItems().addAll(Option);
+        // DeleteMainBtn.getItems().addAll(Option);
 
-        col_name.setCellValueFactory(new PropertyValueFactory<Instructors, String>("firstName"));
-        col_Lname.setCellValueFactory(new PropertyValueFactory<Instructors, String>("lastName"));
-        col_Id.setCellValueFactory(new PropertyValueFactory<Instructors, String>("id"));
-        col_year.setCellValueFactory(new PropertyValueFactory<Instructors, String>("year"));
+        // col_name.setCellValueFactory(new PropertyValueFactory<Instructors,
+        // String>("firstName"));
+        // col_Lname.setCellValueFactory(new PropertyValueFactory<Instructors,
+        // String>("lastName"));
+        // col_Id.setCellValueFactory(new PropertyValueFactory<Instructors,
+        // String>("id"));
+        // col_year.setCellValueFactory(new PropertyValueFactory<Instructors,
+        // String>("year"));
 
-        listM = getInstructors();
+        // listM = getInstructors();
         ListStdTable.setItems(listM);
-
-        // FilteredList<Instructors> filter = new FilteredList<>(listM, e -> true);
-
-        // searchID.textProperty().addListener((listM, newValue, oldValue) -> {
-        // filter.setPredicate((Predicate<? super Instructors>) (Instructors
-        // Instructors) -> {
-
-        // if (newValue.isEmpty() || newValue.isBlank() || newValue == null) {
-        // return true;
-        // }
-
-        // String searchkey = newValue.toLowerCase();
-
-        // if (Instructors.getFirstName().contains(searchkey)) {
-        // return true;
-        // }
-
-        // Instructors std = new Instructors(col_name.getText(), col_Lname.getText(),
-        // col_year.getText(),
-        // col_Id.getText());
-
-        // if (std.getFirstName().toLowerCase().indexOf(searchkey) > -1) {
-        // return true;
-
-        // }
-
-        // else
-        // return false;
-
-        // });
-
-        // });
-
-        // SortedList<Instructors> sort = new SortedList<Instructors>(filter);
-        // sort.comparatorProperty().bind(ListStdTable.comparatorProperty());
-
-        // ListStdTable.setItems(sort);
 
     }
 
